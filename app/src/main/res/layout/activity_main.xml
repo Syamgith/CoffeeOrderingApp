@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -25,14 +25,14 @@
         android:text="TOPPINGS" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Cream" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -47,31 +47,39 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/btnadd"
             android:background="#FF9800"
             android:text="+"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/tvitems"
             android:padding="16dp"
             android:text="0"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/btnremove"
             android:background="#FF9800"
             android:text="-"/>
 
     </LinearLayout>
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Order Summary" />
+    <TextView
+        android:id="@+id/tvorder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="TextView" />
+        android:text="" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnorder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FF9800"

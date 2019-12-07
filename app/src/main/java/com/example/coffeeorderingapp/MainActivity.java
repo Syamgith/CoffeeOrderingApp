@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnadd, btnremove, btnorder;
     TextView tvitems, tvorder;
     EditText etname;
+    CheckBox checkBox1, checkBox2;
     int items;
     String name;
     @Override

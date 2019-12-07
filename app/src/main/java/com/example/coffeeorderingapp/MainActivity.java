@@ -11,7 +11,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Button btnadd, btnremove, btnorder;
     TextView tvitems, tvorder;
+    EditText etname;
     int items;
+    String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         btnadd = findViewById(R.id.btnadd);
         btnremove = findViewById(R.id.btnremove);
         btnorder = findViewById(R.id.btnorder);
+        etname = findViewById(R.id.etname);
+        name = etname.getText().toString();
         tvitems = findViewById(R.id.tvitems);
         tvorder= findViewById(R.id.tvorder);
         items = Integer.parseInt(tvitems.getText().toString());
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 items++;
-                tvitems.setText(""+items);
+                disply();
             }
         });
 
@@ -37,10 +41,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 items--;
-                tvitems.setText(""+items);
+                disply();
             }
         });
 
 
+
+    }
+
+    //disply method
+    void disply() {
+        tvitems.setText(""+items);
+        tvorder.setText("Name : "+name+"\n"+"Quantity : "+items+"\n"+"Total : "+items*10+" Rs");
     }
 }

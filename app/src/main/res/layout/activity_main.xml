@@ -55,6 +55,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvitems"
             android:padding="16dp"
+            android:inputType="number"
             android:text="0"/>
         <Button
             android:layout_width="wrap_content"

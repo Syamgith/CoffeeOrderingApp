@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Button btnadd, btnremove, btnorder;
     TextView tvitems, tvorder;
-    String items;
+    int items;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +22,22 @@ public class MainActivity extends AppCompatActivity {
         btnremove = findViewById(R.id.btnremove);
         btnorder = findViewById(R.id.btnorder);
         tvitems = findViewById(R.id.tvitems);
-        tvitems = findViewById(R.id.tvorder);
-        items = tvitems.getText().toString();
+        tvorder= findViewById(R.id.tvorder);
+        items = Integer.parseInt(tvitems.getText().toString());
 
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                items++;
+                tvitems.setText(""+items);
+            }
+        });
 
+        btnremove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                items--;
+                tvitems.setText(""+items);
             }
         });
 

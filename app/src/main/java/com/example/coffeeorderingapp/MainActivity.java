@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         tvorder= findViewById(R.id.tvorder);
         items = Integer.parseInt(tvitems.getText().toString());
 
+        //checkbox initailization
+        checkBox1 = findViewById(R.id.checkBox1);
+        checkBox2 = findViewById(R.id.checkBox2);
+
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

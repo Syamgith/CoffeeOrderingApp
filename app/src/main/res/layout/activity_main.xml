@@ -15,7 +15,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_marginTop="16dp"
-        android:text="Name" />
+        android:hint="Name" />
 
     <TextView
         android:id="@+id/textView"

@@ -2,12 +2,15 @@ package com.example.coffeeorderingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnadd, btnremove, btnorder;
@@ -40,20 +43,37 @@ public class MainActivity extends AppCompatActivity {
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                items++;
-                disply();
+                if (items <= 100){
+                    items++;
+                    disply();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Maximum 100 coffees per order",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         btnremove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                items--;
-                disply();
+                if (items > 0){
+                    items--;
+                    disply();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Please Select 1 more coffee",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
-
+        btnorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                disply();
+                composeEmail();
+            }
+        });
 
     }
 
@@ -62,5 +82,15 @@ public class MainActivity extends AppCompatActivity {
         tvitems.setText(""+items);
         tvorder.setText("Name : "+name+"\n"+"Quantity : "+items+"\n"+"Whipped cream - "+cbwhippedCream.isChecked()+"\n"+"Chocolate - "+cbchocolate.isChecked()+"\n"+"Total : "+items*10+" Rs");
 
+    }
+
+    public void composeEmail() {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        //intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee orders");
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }

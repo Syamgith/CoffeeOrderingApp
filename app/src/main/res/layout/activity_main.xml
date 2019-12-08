@@ -16,6 +16,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_marginTop="16dp"
+        android:text=""
         android:hint="Name" />
 
     <TextView
@@ -24,7 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TOPPINGS"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <CheckBox
         android:id="@+id/checkBox1"
@@ -55,7 +57,8 @@
             android:background="#7B1FA2"
             android:text="-"
             android:textColor="#FFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,15 +74,19 @@
             android:background="#7B1FA2"
             android:text="+"
             android:textColor="#FFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
+
     <TextView
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Order Summary" />
+        android:text="Order Summary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/tvorder"
         android:layout_width="match_parent"
@@ -95,6 +102,7 @@
         android:background="#7B1FA2"
         android:text="ORDER"
         android:textColor="#FFF"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

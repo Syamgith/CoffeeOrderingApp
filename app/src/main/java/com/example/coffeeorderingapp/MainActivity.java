@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -29,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         btnadd = findViewById(R.id.btnadd);
         btnremove = findViewById(R.id.btnremove);
         btnorder = findViewById(R.id.btnorder);
-        etname = findViewById(R.id.etname);
-        name = etname.getText().toString();
+
+
         tvitems = findViewById(R.id.tvitems);
         tvorder= findViewById(R.id.tvorder);
         items = Integer.parseInt(tvitems.getText().toString());
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     disply();
                 }
                 else {
-                    Toast.makeText(getApplicationContext(),"Please Select 1 more coffee",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Please select 1 or more coffee",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         btnorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                disply();
+
                 composeEmail();
             }
         });
@@ -95,7 +97,12 @@ public class MainActivity extends AppCompatActivity {
     //disply method
     void disply() {
         tvitems.setText(""+items);
-        tvorder.setText("Name : "+name+"\n"+"No. of coffees : "+items+"\n"+"Whipped cream - "+cbwhippedCream.isChecked()+"\n"+"Chocolate - "+cbchocolate.isChecked()+"\n"+"Total : "+items*10+" Rs");
+
+        etname = findViewById(R.id.etname);
+        Editable nameEditable = etname.getText();
+        name = nameEditable.toString();
+
+        tvorder.setText("Name : "+ name +"\n"+"No. of coffees : "+items+"\n"+"Whipped cream - "+cbwhippedCream.isChecked()+"\n"+"Chocolate - "+cbchocolate.isChecked()+"\n"+"Total : "+items*10+" Rs");
 
     }
 

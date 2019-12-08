@@ -67,6 +67,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        cbchocolate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                disply();
+            }
+        });
+
+        cbwhippedCream.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                disply();
+            }
+        });
+
+
         btnorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

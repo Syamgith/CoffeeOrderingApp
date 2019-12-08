@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     //disply method
     void disply() {
         tvitems.setText(""+items);
-        tvorder.setText("Name : "+name+"\n"+"Quantity : "+items+"\n"+"Whipped cream - "+cbwhippedCream.isChecked()+"\n"+"Chocolate - "+cbchocolate.isChecked()+"\n"+"Total : "+items*10+" Rs");
+        tvorder.setText("Name : "+name+"\n"+"No. of coffees : "+items+"\n"+"Whipped cream - "+cbwhippedCream.isChecked()+"\n"+"Chocolate - "+cbchocolate.isChecked()+"\n"+"Total : "+items*10+" Rs");
 
     }
 

@@ -23,7 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TOPPINGS" />
+        android:text="TOPPINGS"
+        android:textSize="18sp" />
 
     <CheckBox
         android:id="@+id/checkBox1"
@@ -48,11 +49,13 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnremove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnremove"
-            android:background="#FF9800"
-            android:text="-"/>
+            android:background="#7B1FA2"
+            android:text="-"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,12 +63,15 @@
             android:padding="16dp"
             android:inputType="number"
             android:text="0"/>
+
         <Button
+            android:id="@+id/btnadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnadd"
-            android:background="#FF9800"
-            android:text="+"/>
+            android:background="#7B1FA2"
+            android:text="+"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
 
     </LinearLayout>
     <TextView
@@ -86,7 +92,9 @@
         android:id="@+id/btnorder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF9800"
-        android:text="ORDER" />
+        android:background="#7B1FA2"
+        android:text="ORDER"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
 
 </LinearLayout>

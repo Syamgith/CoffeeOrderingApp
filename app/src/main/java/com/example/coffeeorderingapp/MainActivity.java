@@ -13,9 +13,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnadd, btnremove, btnorder;
     TextView tvitems, tvorder;
     EditText etname;
-    CheckBox checkBox1, checkBox2;
+    CheckBox cbwhippedCream, cbchocolate;
     int items;
     String name;
+    boolean cream, chocolate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
         items = Integer.parseInt(tvitems.getText().toString());
 
         //checkbox initailization
-        checkBox1 = findViewById(R.id.checkBox1);
-        checkBox2 = findViewById(R.id.checkBox2);
+        cbwhippedCream = findViewById(R.id.checkBox1);
+        cbchocolate = findViewById(R.id.checkBox2);
+
 
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     //disply method
     void disply() {
         tvitems.setText(""+items);
-        tvorder.setText("Name : "+name+"\n"+"Quantity : "+items+"\n"+"Total : "+items*10+" Rs");
+        tvorder.setText("Name : "+name+"\n"+"Quantity : "+items+"\n"+"Whipped cream - "+cbwhippedCream.isChecked()+"\n"+"Chocolate - "+cbchocolate.isChecked()+"\n"+"Total : "+items*10+" Rs");
+
     }
 }

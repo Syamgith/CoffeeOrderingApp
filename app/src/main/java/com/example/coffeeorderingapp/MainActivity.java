@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         //intent.putExtra(Intent.EXTRA_EMAIL, addresses);
         intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee orders");
+        intent.putExtra(Intent.EXTRA_TEXT,tvorder.getText());
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }

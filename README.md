@@ -5,4 +5,9 @@ You can choose the number of coffees and its toppings. The app calculates the pr
 **Language used - JAVA**
 ****
 **IDE - Android Studio**
+****
+## SCREENSHOTS
+![Cal_SS_1](Screenshots/1.jpg)
 
+![Cal_SS_1](Screenshots/2.jpg)
+****
